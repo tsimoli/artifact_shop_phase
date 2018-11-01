@@ -1,5 +1,4 @@
 import 'package:artifact_shop_phase/Item.dart';
-import 'package:artifact_shop_phase/item_card.dart';
 import 'package:artifact_shop_phase/item_combinations_creator.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
@@ -36,14 +35,22 @@ class ItemCombinationListViewState extends State<ItemCombinationListView> {
     if (possibleItemCombinations.length == 0) {
       return Scaffold(
         appBar: AppBar(
-          title: new Text("Item combinations"),
+          title: new Text("Item combinations",
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 20.0,
+              )),
         ),
         body: Padding(
           padding: const EdgeInsets.all(8.0),
           child: Container(
             child: Center(
               child: Text(
-                  "No items can be bougth with this combination of coins and cards"),
+                  "No items can be bougth with this combination of coins and cards",
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontSize: 20.0,
+                  )),
             ),
           ),
         ),
@@ -73,26 +80,24 @@ class ItemCombinationListViewState extends State<ItemCombinationListView> {
                         "Coins",
                         style: TextStyle(
                           fontSize: 20.0,
-                          fontWeight: FontWeight.w900,
                         ),
                       ),
                       Text(
                         "${widget.coins}",
                         style: TextStyle(
-                            fontSize: 20.0, fontWeight: FontWeight.w900),
+                          fontSize: 20.0,
+                        ),
                       ),
                       Text(
                         "Cards",
                         style: TextStyle(
                           fontSize: 20.0,
-                          fontWeight: FontWeight.w900,
                         ),
                       ),
                       Text(
                         "${widget.cards}",
                         style: TextStyle(
                           fontSize: 20.0,
-                          fontWeight: FontWeight.w900,
                         ),
                       ),
                     ]),

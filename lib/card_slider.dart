@@ -45,7 +45,7 @@ class _CardSliderState extends State<CardSlider> {
           child: Slider(
             value: _value,
             min: 1.0,
-            max: 8.0,
+            max: 5.0,
             semanticFormatterCallback: (double value) =>
                 value.round().toString(),
             label: '${_value.round()}',

@@ -4,7 +4,6 @@ import 'dart:ui';
 import 'package:artifact_shop_phase/item_combinations_list_view.dart';
 import 'package:artifact_shop_phase/card_slider.dart';
 import 'package:artifact_shop_phase/coin_slider.dart';
-import 'package:artifact_shop_phase/item_combinations_creator.dart';
 import 'package:flutter/material.dart';
 
 class Content extends StatefulWidget {
@@ -52,12 +51,25 @@ class ContentState extends State<Content> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Container(
+        margin: EdgeInsets.only(top: 50.0),
         child: Padding(
           padding: const EdgeInsets.all(16.0),
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.start,
-            crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
+              Container(
+                margin: EdgeInsets.only(bottom: 80.0),
+                child: Card(
+                  color: Colors.blueGrey,
+                  elevation: 4.0,
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Text(
+                      "Find out the possibilities that your opponent can buy in shop phase",
+                      style: TextStyle(fontSize: 20.0, color: Colors.white),
+                    ),
+                  ),
+                ),
+              ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: <Widget>[
@@ -66,8 +78,6 @@ class ContentState extends State<Content> {
                     style: TextStyle(
                       color: Colors.black,
                       fontSize: 20.0,
-                      fontWeight: FontWeight.w900,
-                      fontFamily: 'Radiance',
                     ),
                   ),
                   Text(
@@ -75,8 +85,6 @@ class ContentState extends State<Content> {
                     style: TextStyle(
                       color: Colors.black,
                       fontSize: 20.0,
-                      fontWeight: FontWeight.w900,
-                      fontFamily: 'Radiance',
                     ),
                   ),
                 ],
@@ -90,8 +98,6 @@ class ContentState extends State<Content> {
                     style: TextStyle(
                       color: Colors.black,
                       fontSize: 20.0,
-                      fontWeight: FontWeight.w900,
-                      fontFamily: 'Radiance',
                     ),
                   ),
                   Text(
@@ -99,8 +105,6 @@ class ContentState extends State<Content> {
                     style: TextStyle(
                       color: Colors.black,
                       fontSize: 20.0,
-                      fontWeight: FontWeight.w900,
-                      fontFamily: 'Radiance',
                     ),
                   ),
                 ],
@@ -127,7 +131,10 @@ class ContentState extends State<Content> {
                     },
                     child: Text(
                       "Show combinations",
-                      style: TextStyle(color: Colors.white),
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 20.0,
+                      ),
                     ),
                   ),
                 ),

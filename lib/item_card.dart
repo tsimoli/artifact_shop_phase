@@ -37,7 +37,6 @@ class ItemCard extends StatelessWidget {
                 style: TextStyle(
                   color: Colors.white,
                   fontSize: 16.0,
-                  fontFamily: 'Radiance',
                 ),
               ),
             ),
@@ -123,7 +122,6 @@ class ItemCard extends StatelessWidget {
                 style: TextStyle(
                   color: Colors.white,
                   fontSize: 12.0,
-                  fontFamily: 'Radiance',
                 ),
               ),
             ),

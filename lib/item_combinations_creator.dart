@@ -3,6 +3,9 @@ import 'package:artifact_shop_phase/items.dart';
 import 'package:trotter/trotter.dart';
 
 class ItemCombinationsCreator {
+  static int maxCombinations = 50;
+  static int maxCostToBreak = 50;
+
   static List<List<Item>> getCombinations(List coinsAndCards) {
     List<List<Item>> combinations = [];
 
@@ -15,13 +18,13 @@ class ItemCombinationsCreator {
         totalCost += (item as Item).cost;
       }
       // Some limit here to prevent long calculations
-      if (combinations.length >= 50 || totalCost > (coinsAndCards[0] + 50)) {
+      if (combinations.length >= maxCombinations ||
+          totalCost > (coinsAndCards[0] + maxCostToBreak)) {
         break;
       }
 
       if (totalCost == coinsAndCards[0] &&
-          (coinsAndCards[1] < 3 ||
-              !_containsMoreThan3OfSameItem(itemComposition.cast<Item>()))) {
+          !_containsMoreThan3OfSameItem(itemComposition.cast<Item>())) {
         combinations.add(itemComposition.cast<Item>());
       }
     }
