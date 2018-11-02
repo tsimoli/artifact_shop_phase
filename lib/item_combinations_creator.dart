@@ -9,6 +9,10 @@ class ItemCombinationsCreator {
   static List<List<Item>> getCombinations(List coinsAndCards) {
     List<List<Item>> combinations = [];
 
+    if ((coinsAndCards[1] * 3) > coinsAndCards[0]) {
+      return combinations = [];
+    }
+
     var itemCompositions = Compositions(coinsAndCards[1],
         Items.items.where((item) => item.cost <= coinsAndCards[0]).toList());
 

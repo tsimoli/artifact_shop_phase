@@ -64,7 +64,7 @@ class ContentState extends State<Content> {
                   child: Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: Text(
-                      "Find out the possibilities that your opponent can buy in shop phase",
+                      "Find out the item combinations that your opponent can buy in shop phase",
                       style: TextStyle(fontSize: 20.0, color: Colors.white),
                     ),
                   ),
@@ -74,7 +74,7 @@ class ContentState extends State<Content> {
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: <Widget>[
                   Text(
-                    "Coins",
+                    "Coins used",
                     style: TextStyle(
                       color: Colors.black,
                       fontSize: 20.0,
@@ -94,7 +94,7 @@ class ContentState extends State<Content> {
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: <Widget>[
                   Text(
-                    "Cards",
+                    "Cards added",
                     style: TextStyle(
                       color: Colors.black,
                       fontSize: 20.0,

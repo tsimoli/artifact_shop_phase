@@ -80,24 +80,28 @@ class ItemCombinationListViewState extends State<ItemCombinationListView> {
                         "Coins",
                         style: TextStyle(
                           fontSize: 20.0,
+                          color: Colors.white,
                         ),
                       ),
                       Text(
                         "${widget.coins}",
                         style: TextStyle(
                           fontSize: 20.0,
+                          color: Colors.white,
                         ),
                       ),
                       Text(
                         "Cards",
                         style: TextStyle(
                           fontSize: 20.0,
+                          color: Colors.white,
                         ),
                       ),
                       Text(
                         "${widget.cards}",
                         style: TextStyle(
                           fontSize: 20.0,
+                          color: Colors.white,
                         ),
                       ),
                     ]),
