@@ -1,4 +1,5 @@
 import 'package:artifact_shop_phase/content.dart';
+import 'package:dynamic_theme/dynamic_theme.dart';
 import 'package:flutter/material.dart';
 
 void main() => runApp(new MyApp());
@@ -12,14 +13,20 @@ void main() => runApp(new MyApp());
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return new MaterialApp(
-      title: 'Flutter Demo',
-      theme: new ThemeData(
-        primarySwatch: Colors.blueGrey,
-        fontFamily: 'Radiance',
-      ),
-      home: new MyHomePage(),
-    );
+    return DynamicTheme(
+        defaultBrightness: Brightness.light,
+        data: (brightness) => ThemeData(
+              primarySwatch: Colors.blueGrey,
+              fontFamily: 'Radiance',
+              brightness: brightness,
+            ),
+        themedWidgetBuilder: (context, theme) {
+          return new MaterialApp(
+            title: 'Flutter Demo',
+            theme: theme,
+            home: MyHomePage(),
+          );
+        });
   }
 }
 

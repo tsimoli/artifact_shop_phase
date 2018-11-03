@@ -1,9 +1,10 @@
 import 'dart:async';
 import 'dart:ui';
 
-import 'package:artifact_shop_phase/item_combinations_list_view.dart';
 import 'package:artifact_shop_phase/card_slider.dart';
 import 'package:artifact_shop_phase/coin_slider.dart';
+import 'package:artifact_shop_phase/item_combinations_list_view.dart';
+import 'package:dynamic_theme/dynamic_theme.dart';
 import 'package:flutter/material.dart';
 
 class Content extends StatefulWidget {
@@ -56,6 +57,31 @@ class ContentState extends State<Content> {
           padding: const EdgeInsets.all(16.0),
           child: Column(
             children: <Widget>[
+              Text(
+                "Artifact shopping phase",
+                style: TextStyle(
+                  fontSize: 30.0,
+                  color: Colors.amber[900],
+                ),
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: <Widget>[
+                  Switch(
+                    value:
+                        (DynamicTheme.of(context).brightness as Brightness) ==
+                            Brightness.dark,
+                    onChanged: (bool value) {
+                      if (value) {
+                        DynamicTheme.of(context).setBrightness(Brightness.dark);
+                      } else
+                        DynamicTheme.of(context)
+                            .setBrightness(Brightness.light);
+                    },
+                  ),
+                  Icon(Icons.brightness_medium),
+                ],
+              ),
               Container(
                 margin: EdgeInsets.only(bottom: 80.0),
                 child: Card(
