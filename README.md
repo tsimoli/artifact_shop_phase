@@ -1,8 +1,3 @@
 # artifact_shop_phase
 
-A new Flutter application.
-
-## Getting Started
-
-For help getting started with Flutter, view our online
-[documentation](https://flutter.io/).
+https://play.google.com/store/apps/details?id=com.simolin.artifactshopphase
